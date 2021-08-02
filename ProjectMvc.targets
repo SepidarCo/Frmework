@@ -1,0 +1,12 @@
+<Project>
+
+  <ItemGroup>
+    <Reference Include="Sepidar.Mvc">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  
+  <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+
+</Project>

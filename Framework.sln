@@ -1,0 +1,124 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29324.140
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{96177263-FF19-4EDE-80C8-25A5B7DD212D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlobManagement", "BlobManagement\BlobManagement.csproj", "{D0556F36-EF26-42CE-B085-9EA10DB6D330}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Console", "Console\Console.csproj", "{CA19572E-DFE8-462B-BFDB-7D6CCD6DCE2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "EntityFramework\EntityFramework.csproj", "{626F4DC9-3D5A-4491-AD3F-24AB3EA48CD1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Normalization", "Normalization\Normalization.csproj", "{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment", "Payment\Payment.csproj", "{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "Security\Security.csproj", "{88FD3F23-598F-422F-9B13-E38EB12EAEC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sql", "Sql\Sql.csproj", "{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Validation", "Validation\Validation.csproj", "{2B9EE889-D920-4869-9F67-233C4BCEE065}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsService", "WindowsService\WindowsService.csproj", "{75E11E3E-0A7A-4AB4-884F-F413B22659B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Mvc\Mvc.csproj", "{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{96177263-FF19-4EDE-80C8-25A5B7DD212D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96177263-FF19-4EDE-80C8-25A5B7DD212D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96177263-FF19-4EDE-80C8-25A5B7DD212D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96177263-FF19-4EDE-80C8-25A5B7DD212D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0556F36-EF26-42CE-B085-9EA10DB6D330}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0556F36-EF26-42CE-B085-9EA10DB6D330}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0556F36-EF26-42CE-B085-9EA10DB6D330}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0556F36-EF26-42CE-B085-9EA10DB6D330}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA19572E-DFE8-462B-BFDB-7D6CCD6DCE2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA19572E-DFE8-462B-BFDB-7D6CCD6DCE2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA19572E-DFE8-462B-BFDB-7D6CCD6DCE2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA19572E-DFE8-462B-BFDB-7D6CCD6DCE2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{626F4DC9-3D5A-4491-AD3F-24AB3EA48CD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{626F4DC9-3D5A-4491-AD3F-24AB3EA48CD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{626F4DC9-3D5A-4491-AD3F-24AB3EA48CD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{626F4DC9-3D5A-4491-AD3F-24AB3EA48CD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B9EE889-D920-4869-9F67-233C4BCEE065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B9EE889-D920-4869-9F67-233C4BCEE065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B9EE889-D920-4869-9F67-233C4BCEE065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B9EE889-D920-4869-9F67-233C4BCEE065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75E11E3E-0A7A-4AB4-884F-F413B22659B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75E11E3E-0A7A-4AB4-884F-F413B22659B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75E11E3E-0A7A-4AB4-884F-F413B22659B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75E11E3E-0A7A-4AB4-884F-F413B22659B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A4250B4-C1BE-4CC6-BBC6-B2C7834C3887}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 12
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://sepidarco.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Framework\\Framework.csproj
+		SccProjectName1 = Framework
+		SccLocalPath1 = Framework
+		SccProjectUniqueName2 = BlobManagement\\BlobManagement.csproj
+		SccProjectName2 = BlobManagement
+		SccLocalPath2 = BlobManagement
+		SccProjectUniqueName3 = Console\\Console.csproj
+		SccProjectName3 = Console
+		SccLocalPath3 = Console
+		SccProjectUniqueName4 = EntityFramework\\EntityFramework.csproj
+		SccProjectName4 = EntityFramework
+		SccLocalPath4 = EntityFramework
+		SccProjectUniqueName5 = Normalization\\Normalization.csproj
+		SccProjectName5 = Normalization
+		SccLocalPath5 = Normalization
+		SccProjectUniqueName6 = Payment\\Payment.csproj
+		SccProjectName6 = Payment
+		SccLocalPath6 = Payment
+		SccProjectUniqueName7 = Security\\Security.csproj
+		SccProjectName7 = Security
+		SccLocalPath7 = Security
+		SccProjectUniqueName8 = Sql\\Sql.csproj
+		SccProjectName8 = Sql
+		SccLocalPath8 = Sql
+		SccProjectUniqueName9 = Validation\\Validation.csproj
+		SccProjectName9 = Validation
+		SccLocalPath9 = Validation
+		SccProjectUniqueName10 = WindowsService\\WindowsService.csproj
+		SccProjectName10 = WindowsService
+		SccLocalPath10 = WindowsService
+		SccProjectUniqueName11 = Mvc\\Mvc.csproj
+		SccProjectName11 = Mvc
+		SccLocalPath11 = Mvc
+	EndGlobalSection
+EndGlobal

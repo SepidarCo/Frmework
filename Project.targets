@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+
+  <ItemGroup>
+    <Reference Include="Sepidar.Framework">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Framework.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="$(SolutionDir)\appsettings.json" Link="appsettings.json" Condition="Exists('$(SolutionDir)\appsettings.json')" >
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Inflector.NetCore" Version="1.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.19" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+  </ItemGroup>
+
+  <!--<Target Name="AfterClean" AfterTargets="Clean">
+    <RemoveDir Directories="$(OUTDIR)" />
+  </Target>-->
+
+  <Target Name="KillDotNetInServicePreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="taskkill /f /fi &quot;pid gt 0&quot; /im dotnet.exe" IgnoreExitCode="true" IgnoreStandardErrorWarningFormat="true" />
+  </Target>
+
+  <Target Name="KillW3wpInServicePreBuild" BeforeTargets="PreBuildEvent">
+    <Exec Command="taskkill /f /fi &quot;pid gt 0&quot; /im w3wp.exe" IgnoreExitCode="true" IgnoreStandardErrorWarningFormat="true" />
+  </Target>
+
+  <!-- <PropertyGroup> -->
+  <!--   <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath> -->
+  <!-- </PropertyGroup> -->
+
+</Project>

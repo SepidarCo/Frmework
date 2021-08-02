@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    
+	<Import Project="$(SepidarProjectsRoot)\Core\Framework\Project.targets" />
+	
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.0.0" />
+	<PackageReference Include="Quartz" Version="3.0.7" />
+  </ItemGroup>
+	
+<ItemGroup>
+    <Reference Include="Core.Framework.EntityFramework">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Framework.WindowsService">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.WindowsService.dll</HintPath>
+    </Reference>
+  </ItemGroup>  
+  
+    <ItemGroup>
+    <ProjectReference Include="..\..\Common\Common.csproj" />
+    <ProjectReference Include="..\..\DataAccess\DataAccess.csproj" />
+    <ProjectReference Include="..\..\Business\Business.csproj" />
+  </ItemGroup>
+  
+    <ItemGroup>
+    <Reference Include="Core.Framework.Web">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Framework">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Framework.Api">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.Api.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Framework.BlobManagement">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.BlobManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Core.Framework.EntityFramework">
+      <HintPath>$(SepidarProjectsRoot)\Core\Framework\Assemblies\Core.Framework.EntityFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <!-- <Import Project="$(SepidarProjectsRoot)\Core\Framework\ProjectService.targets" /> -->
+  
+</Project>

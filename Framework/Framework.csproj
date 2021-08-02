@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.Framework</AssemblyName>
+    <RootNamespace>Sepidar.Framework</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="Inflector.NetCore" Version="1.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="3.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.0.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.19" />
+    <PackageReference Include="Quartz" Version="3.0.7" />
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="	echo &quot;$(TargetDir) &quot;&#xD;&#xA;	echo &quot;$(SolutionDir)\Assemblies\ &quot;&#xD;&#xA;	echo &quot;$(TargetDir) &quot; &quot;$(SolutionDir)\Assemblies\ &quot; $(TargetFileName) /is&#xD;&#xA;robocopy $(TargetDir) $(SolutionDir)\Assemblies\ $(TargetFileName) /is&#xD;&#xA;robocopy $(TargetDir) $(SolutionDir)\Assemblies\ $(TargetName).pdb /is&#xD;&#xA;set/A errlev=&quot;ERRORLEVEL &amp; 24&quot;&#xD;&#xA;exit/B errlev&#xD;&#xA;" />
+  </Target>
+
+</Project>
+ 

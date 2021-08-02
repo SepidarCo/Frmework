@@ -1,0 +1,6 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+	<Import Project="$(SepidarProjectsRoot)\Framework\ProjectConsole.targets" />
+
+</Project>

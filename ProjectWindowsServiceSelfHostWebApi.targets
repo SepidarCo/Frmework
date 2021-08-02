@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	
+<ItemGroup>
+    <Reference Include="Core.Framework.Api">
+      <HintPath>..\..\..\Core\Framework\Assemblies\Core.Framework.Api.dll</HintPath>
+    </Reference>
+  </ItemGroup>  
+  
+  <Import Project="$(SepidarProjectsRoot)\Core\Framework\ProjectWindowsService.targets" />
+  
+</Project>

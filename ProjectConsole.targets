@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+
+    <ItemGroup>
+    <ProjectReference Include="..\Business\Business.csproj">
+      <Private>true</Private>
+    </ProjectReference>
+  </ItemGroup>
+  
+   <ItemGroup>
+    <Reference Include="Sepidar.Console">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Console.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+  
+ 
+   
+</Project>
