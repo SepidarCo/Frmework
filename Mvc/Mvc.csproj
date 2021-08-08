@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.Mvc</AssemblyName>
+    <RootNamespace>Sepidar.Mvc</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Security\Security.csproj" />
+    <ProjectReference Include="..\Validation\Validation.csproj" />
+  </ItemGroup>
+  
+</Project>
