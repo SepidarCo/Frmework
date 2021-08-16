@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.BlobManagement</AssemblyName>
+    <RootNamespace>Sepidar.BlobManagement</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectEf.targets" />
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+
+</Project>
