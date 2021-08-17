@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.Sql</AssemblyName>
+    <RootNamespace>Sepidar.Sql</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,173 @@
+﻿declare @dropPersianDateTimes varchar(max) = '';
+select @dropPersianDateTimes = @dropPersianDateTimes + char(10) +
+	'alter table ' + 
+	quotename(object_schema_name(sys.sql_dependencies.[object_id])) + 
+	'.' + 
+	quotename(object_name(sys.sql_dependencies.[object_id])) + 
+	char(10) +
+	'drop column ' +
+	sys.columns.name
+from sys.sql_dependencies
+inner join sys.columns on 
+sys.sql_dependencies.[object_id] = sys.columns.[object_id]
+and sys.sql_dependencies.column_id = sys.columns.column_id
+where (referenced_major_id = object_id('dbo.ToPersianDate')
+or referenced_major_id = object_id('dbo.ToPersianDateTime'))
+execute sp_sqlexec @dropPersianDateTimes
+
+exec sp_configure 'show advanced options', 1
+go
+
+reconfigure
+go
+
+exec sp_configure 'xp_cmdshell', 1
+go
+
+reconfigure
+go
+
+execute sp_configure 'clr enabled', 1
+go
+
+reconfigure
+go
+
+set nocount on
+
+begin try
+	drop function dbo.OrderCharacters
+end try
+begin catch
+end catch
+go
+
+set nocount on
+
+begin try
+	drop function dbo.SplitCsv
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.IsNationalCode
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.Matches
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.RegexReplace
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.ToPersianDate
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.ToPersianDateTime
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop function dbo.GetCharacters
+end try
+begin catch
+end catch
+go
+
+begin try
+	drop assembly SunFrameworkSql
+end try
+begin catch
+end catch
+go
+
+declare @path varchar(256) = '';
+declare @table table
+(
+	Value varchar(256)
+)
+insert into @table execute xp_cmdshell 'echo %SunProjectsRoot%'
+set @path = 
+(
+	select top 1 Value 
+	from @table
+)
+set @path = @path + '\Framework\Assemblies\Sun.Framework.Sql.dll'
+create assembly SunFrameworkSql from @path
+go
+
+create function OrderCharacters(@text nvarchar(max))
+returns nvarchar(max)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.HelperFunctions].OrderCharacters
+go
+
+create function SplitCsv(@value nvarchar(max))
+returns table
+(
+	[Character] nvarchar(max)
+)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.HelperFunctions].SplitCsv
+go
+
+create function IsNationalCode(@text nvarchar(100))
+returns bit
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.Validation.NationalCode].IsNationalCode
+go
+
+create function Matches(@pattern nvarchar(200), @text nvarchar(200))
+returns bit
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.RegularExpression].Matches
+go
+
+create function RegexReplace(@text nvarchar(200), @pattern nvarchar(200), @replacement nvarchar(200))
+returns nvarchar(200)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.RegularExpression].RegexReplace
+go
+
+create function ToPersianDate(@value datetime)
+returns nvarchar(100)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.PersianDate].ToPersianDate
+go
+
+create function ToPersianDateTime(@value datetime)
+returns nvarchar(100)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.PersianDate].ToPersianDateTime
+go
+
+create function GetCharacters(@value nvarchar(max))
+returns table
+(
+	[Character] nvarchar(100)
+)
+as
+external name [SunFrameworkSql].[Sun.Framework.Sql.HelperFunctions].GetCharacters
+go
+
+select dbo.ToPersianDate(getdate())
+select dbo.ToPersianDateTime(getdate())
