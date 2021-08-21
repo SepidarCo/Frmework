@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.Security</AssemblyName>
+    <RootNamespace>Sepidar.Security</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+
+</Project>
