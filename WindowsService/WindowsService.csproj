@@ -12,8 +12,8 @@
     <RootNamespace>Sepidar.WindowsService</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectReusable.targets" />
   
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="3.0.0" />

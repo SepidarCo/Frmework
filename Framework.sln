@@ -13,8 +13,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntityFramework", "EntityFr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Normalization", "Normalization\Normalization.csproj", "{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment", "Payment\Payment.csproj", "{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Security", "Security\Security.csproj", "{88FD3F23-598F-422F-9B13-E38EB12EAEC2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sql", "Sql\Sql.csproj", "{4DBCC6BE-BB5F-4A28-A0C8-F639B8041EAD}"
@@ -23,7 +21,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Validation", "Validation\Va
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsService", "WindowsService\WindowsService.csproj", "{75E11E3E-0A7A-4AB4-884F-F413B22659B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mvc", "Mvc\Mvc.csproj", "{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mvc", "Mvc\Mvc.csproj", "{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseApi", "BaseApi\BaseApi.csproj", "{85AE2A3B-15FF-4D6A-96A0-C473850D9295}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MassFileNameChanger", "MassFileNameChanger\MassFileNameChanger.csproj", "{E05D8B6E-5F13-4C99-9DF3-D4915B6D267A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectSetup", "ProjectSetup\ProjectSetup.csproj", "{E567F401-4835-4DA6-87C7-AFC9CA82A7F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeGenerator", "CodeGenerator\CodeGenerator.csproj", "{10525760-4A57-4BFE-90E6-A2B72C6D4DB8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,10 +57,6 @@ Global
 		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{957D6254-E1B5-4AB1-B5FB-268A9FB9D3D0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FC87DA1F-55AD-498C-8EE1-11A6439B6A29}.Release|Any CPU.Build.0 = Release|Any CPU
 		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88FD3F23-598F-422F-9B13-E38EB12EAEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -75,6 +77,22 @@ Global
 		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E536A43-9BFD-4D5C-B818-38D1AE2C1377}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85AE2A3B-15FF-4D6A-96A0-C473850D9295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85AE2A3B-15FF-4D6A-96A0-C473850D9295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85AE2A3B-15FF-4D6A-96A0-C473850D9295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85AE2A3B-15FF-4D6A-96A0-C473850D9295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E05D8B6E-5F13-4C99-9DF3-D4915B6D267A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E05D8B6E-5F13-4C99-9DF3-D4915B6D267A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E05D8B6E-5F13-4C99-9DF3-D4915B6D267A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E05D8B6E-5F13-4C99-9DF3-D4915B6D267A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E567F401-4835-4DA6-87C7-AFC9CA82A7F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E567F401-4835-4DA6-87C7-AFC9CA82A7F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E567F401-4835-4DA6-87C7-AFC9CA82A7F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E567F401-4835-4DA6-87C7-AFC9CA82A7F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10525760-4A57-4BFE-90E6-A2B72C6D4DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10525760-4A57-4BFE-90E6-A2B72C6D4DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10525760-4A57-4BFE-90E6-A2B72C6D4DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10525760-4A57-4BFE-90E6-A2B72C6D4DB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,42 +101,58 @@ Global
 		SolutionGuid = {9A4250B4-C1BE-4CC6-BBC6-B2C7834C3887}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 12
+		SccNumberOfProjects = 10
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://sepidarco.visualstudio.com/
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = Framework\\Framework.csproj
-		SccProjectName1 = Framework
-		SccLocalPath1 = Framework
-		SccProjectUniqueName2 = BlobManagement\\BlobManagement.csproj
-		SccProjectName2 = BlobManagement
-		SccLocalPath2 = BlobManagement
-		SccProjectUniqueName3 = Console\\Console.csproj
-		SccProjectName3 = Console
-		SccLocalPath3 = Console
-		SccProjectUniqueName4 = EntityFramework\\EntityFramework.csproj
-		SccProjectName4 = EntityFramework
-		SccLocalPath4 = EntityFramework
-		SccProjectUniqueName5 = Normalization\\Normalization.csproj
-		SccProjectName5 = Normalization
-		SccLocalPath5 = Normalization
-		SccProjectUniqueName6 = Payment\\Payment.csproj
-		SccProjectName6 = Payment
-		SccLocalPath6 = Payment
-		SccProjectUniqueName7 = Security\\Security.csproj
-		SccProjectName7 = Security
-		SccLocalPath7 = Security
-		SccProjectUniqueName8 = Sql\\Sql.csproj
-		SccProjectName8 = Sql
-		SccLocalPath8 = Sql
-		SccProjectUniqueName9 = Validation\\Validation.csproj
-		SccProjectName9 = Validation
-		SccLocalPath9 = Validation
-		SccProjectUniqueName10 = WindowsService\\WindowsService.csproj
-		SccProjectName10 = WindowsService
-		SccLocalPath10 = WindowsService
-		SccProjectUniqueName11 = Mvc\\Mvc.csproj
-		SccProjectName11 = Mvc
-		SccLocalPath11 = Mvc
+		SccProjectUniqueName0 = Framework\\Framework.csproj
+		SccProjectName0 = Framework
+		SccAuxPath0 = https://sepidarco.visualstudio.com
+		SccLocalPath0 = Framework
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = BlobManagement\\BlobManagement.csproj
+		SccProjectName1 = BlobManagement
+		SccAuxPath1 = https://sepidarco.visualstudio.com
+		SccLocalPath1 = BlobManagement
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = Console\\Console.csproj
+		SccProjectName2 = Console
+		SccAuxPath2 = https://sepidarco.visualstudio.com
+		SccLocalPath2 = Console
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName3 = EntityFramework\\EntityFramework.csproj
+		SccProjectName3 = EntityFramework
+		SccAuxPath3 = https://sepidarco.visualstudio.com
+		SccLocalPath3 = EntityFramework
+		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName4 = Normalization\\Normalization.csproj
+		SccProjectName4 = Normalization
+		SccAuxPath4 = https://sepidarco.visualstudio.com
+		SccLocalPath4 = Normalization
+		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName5 = Security\\Security.csproj
+		SccProjectName5 = Security
+		SccAuxPath5 = https://sepidarco.visualstudio.com
+		SccLocalPath5 = Security
+		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName6 = Sql\\Sql.csproj
+		SccProjectName6 = Sql
+		SccAuxPath6 = https://sepidarco.visualstudio.com
+		SccLocalPath6 = Sql
+		SccProvider6 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName7 = Validation\\Validation.csproj
+		SccProjectName7 = Validation
+		SccAuxPath7 = https://sepidarco.visualstudio.com
+		SccLocalPath7 = Validation
+		SccProvider7 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName8 = WindowsService\\WindowsService.csproj
+		SccProjectName8 = WindowsService
+		SccAuxPath8 = https://sepidarco.visualstudio.com
+		SccLocalPath8 = WindowsService
+		SccProvider8 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName9 = Mvc\\Mvc.csproj
+		SccProjectName9 = Mvc
+		SccAuxPath9 = https://sepidarco.visualstudio.com
+		SccLocalPath9 = Mvc
+		SccProvider9 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 	EndGlobalSection
 EndGlobal

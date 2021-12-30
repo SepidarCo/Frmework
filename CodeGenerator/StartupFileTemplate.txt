@@ -1,0 +1,134 @@
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json.Serialization;
+using Sun.Varzesh11New.Business;
+using Sun.Varzesh11New.Business.Interfaces;
+using Sun.Varzesh11New.DataAccess.DbContexts;
+using Sun.Varzesh11New.Service.Filters;
+using Core.Framework.Api;
+using Core.Framework.EntityFramework;
+
+namespace Sun.Varzesh11New.Service
+{
+    public class Startup
+    {
+        private static string allowedSpecificOrigins = "AllowedSpecificOrigins";
+
+        public Startup(IConfiguration configuration)
+        {
+            Configuration = configuration;
+        }
+
+        public IConfiguration Configuration { get; }
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddControllers();
+
+            RegisterServices(services);
+        }
+
+        private void RegisterServices(IServiceCollection services)
+        {
+            services.AddDbContextPool<AppDbContext>(options =>
+            {
+                var connectionString = Configuration.GetConnectionString("Varzesh11New");
+                options.UseSqlServer(connectionString);
+            });
+
+            RegisterRepositories(services);
+            RegisterBusinesses(services);
+
+            services.AddHttpContextAccessor();
+
+            RegisterCors(services);
+            RegisterMvc(services);
+        }
+
+        private void RegisterRepositories(IServiceCollection services)
+        {
+            // InjectRepositories
+        }
+
+        private void RegisterBusinesses(IServiceCollection services)
+        {
+            // InjectBusinesses
+        }
+        
+        private void RegisterCors(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy(allowedSpecificOrigins,
+                    builder =>
+                    {
+                        if (Core.Framework.Config.HasSetting("Security:CorsAllowedOrigins"))
+                        {
+                            builder.WithOrigins(Core.Framework.Config.GetSetting("Security:CorsAllowedOrigins"))
+                                .AllowAnyHeader()
+                                .AllowAnyMethod()
+                                .AllowCredentials();
+                        }
+                    });
+            });
+        }
+
+        private void RegisterMvc(IServiceCollection services)
+        {
+            services.AddMvc(options =>
+            {
+                options.Filters.Add(typeof(ResponseFilter));
+                options.EnableEndpointRouting = false;
+                options.ModelBinderProviders.Insert(0, new ListOptionsModelBinderProvider());
+            });
+
+
+            services.AddMvc()
+                .AddNewtonsoftJson(options =>
+                    options.SerializerSettings.ContractResolver =
+                        new DefaultContractResolver());
+        }
+
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        {
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+
+            ConfigureHttpContext(app);
+
+            app.UseCors(allowedSpecificOrigins);
+
+            ConfigureRoutes(app);
+
+            
+        }
+
+        private void ConfigureHttpContext(IApplicationBuilder app)
+        {
+            AppHttpContext.Configure(app.ApplicationServices.GetRequiredService<IHttpContextAccessor>());
+        }
+
+        private void ConfigureRoutes(IApplicationBuilder app)
+        {
+            app.UseMvc(routes =>
+            {
+                routes.MapAreaRoute("EndUserArea", "EndUser", "EndUser/{controller=Home}/{action=Index}/{id?}");
+                routes.MapAreaRoute("AdminArea", "Admin", "Admin/{controller=Home}/{action=Index}/{id?}");
+
+                routes.MapRoute("default", "{controller=Home}/{action=Index}/{id?}");
+            });
+        }
+
+    }
+}

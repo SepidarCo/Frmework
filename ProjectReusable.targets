@@ -1,6 +1,6 @@
 <Project>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\Project.targets" />
   
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
     <Exec Command="	echo &quot;$(TargetDir) &quot;&#xD;&#xA;	echo &quot;$(SolutionDir)\Assemblies\ &quot;&#xD;&#xA;	echo &quot;$(TargetDir) &quot; &quot;$(SolutionDir)\Assemblies\ &quot; $(TargetFileName) /is&#xD;&#xA;robocopy $(TargetDir) $(SolutionDir)\Assemblies\ $(TargetFileName) /is&#xD;&#xA;robocopy $(TargetDir) $(SolutionDir)\Assemblies\ $(TargetName).pdb /is&#xD;&#xA;set/A errlev=&quot;ERRORLEVEL &amp; 24&quot;&#xD;&#xA;exit/B errlev&#xD;&#xA;" />

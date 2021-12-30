@@ -12,9 +12,9 @@
     <RootNamespace>Sepidar.EntityFramework</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectEf.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectEf.targets" />
 
   <ItemGroup>
     <ProjectReference Include="..\Normalization\Normalization.csproj" />

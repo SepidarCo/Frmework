@@ -12,7 +12,7 @@
     <RootNamespace>Sepidar.Framework</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
 
   <ItemGroup>
     <PackageReference Include="Inflector.NetCore" Version="1.2.3" />

@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+
+  <ItemGroup>
+    <Reference Include="Sepidar.ProjectSetup">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.ProjectSetup.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectConsole.targets" />
+
+  <ItemGroup>
+    <None Update="Setup.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  
+</Project>

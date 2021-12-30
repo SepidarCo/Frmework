@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup Label="Globals">
+    <SccProjectName>SAK</SccProjectName>
+    <SccProvider>SAK</SccProvider>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccLocalPath>SAK</SccLocalPath>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>Sepidar.CodeGenerator</AssemblyName>
+    <RootNamespace>Sepidar.CodeGenerator</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectReusableQuality.targets" />
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sepidar.Sql">
+      <HintPath>..\..\Framework\Assemblies\Sepidar.Sql.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

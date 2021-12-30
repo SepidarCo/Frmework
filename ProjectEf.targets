@@ -1,6 +1,6 @@
 <Project>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\Project.targets" />
   
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.0.0" />

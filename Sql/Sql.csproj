@@ -12,8 +12,8 @@
     <RootNamespace>Sepidar.Sql</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectReusable.targets" />
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.7.0" />

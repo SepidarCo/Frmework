@@ -12,7 +12,7 @@
     <RootNamespace>Sepidar.Security</RootNamespace>
   </PropertyGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectReusable.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectReusable.targets" />
 
 </Project>

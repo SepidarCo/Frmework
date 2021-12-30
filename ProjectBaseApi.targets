@@ -1,0 +1,43 @@
+<Project>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.0.3" />
+  </ItemGroup>
+
+  <!-- <ItemGroup> -->
+    <!-- <Reference Include="Sepidar.DataAccess"> -->
+      <!-- <HintPath>$(SepidarProjectsRoot)\Api\Assemblies\Sepidar.DataAccess.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
+  <!-- </ItemGroup> -->
+  
+  <!-- <ItemGroup> -->
+    <!-- <Reference Include="Sepidar.Business"> -->
+      <!-- <HintPath>$(SepidarProjectsRoot)\Api\Assemblies\Sepidar.Business.dll</HintPath> -->
+      <!-- <Private>True</Private> -->
+    <!-- </Reference> -->
+  <!-- </ItemGroup> -->
+  
+  <ItemGroup>
+    <Reference Include="Sepidar.BaseApi">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.BaseApi.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Sepidar.BlobManagement">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.BlobManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="Sepidar.EntityFramework">
+      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.EntityFramework.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  
+  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectEf.targets" />
+  
+</Project>
