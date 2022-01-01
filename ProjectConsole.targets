@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+    <Import Project="$(GitSepidarProjectsRoot)\Framework\Project.targets" />
 
     <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
@@ -10,7 +10,7 @@
   
    <ItemGroup>
     <Reference Include="Sepidar.Console">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Console.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.Console.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>

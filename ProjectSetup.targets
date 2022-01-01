@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
 
   <ItemGroup>
     <Reference Include="Sepidar.ProjectSetup">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.ProjectSetup.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.ProjectSetup.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>
 
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectConsole.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectConsole.targets" />
 
   <ItemGroup>
     <None Update="Setup.json">

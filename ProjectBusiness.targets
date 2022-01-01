@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
   
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
   
   <ItemGroup>
     <Reference Include="Sepidar.Normalization.dll">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Normalization.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.Normalization.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="Sepidar.Validation.dll">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Validation.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.Validation.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>
@@ -16,7 +16,6 @@
   <ItemGroup>
     <PackageReference Include="EPPlus" Version="4.5.3.2" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.2.0" />
-    <PackageReference Include="System.Linq.Dynamic.Core" Version="1.0.19" />
   </ItemGroup>
 
  <ItemGroup>
@@ -25,10 +24,10 @@
   
     <ItemGroup>
     <Reference Include="Sepidar.BlobManagement">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.BlobManagement.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.BlobManagement.dll</HintPath>
     </Reference>
   </ItemGroup>
   
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectDataAccess.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDataAccess.targets" />
   
 </Project>

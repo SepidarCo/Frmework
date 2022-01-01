@@ -24,20 +24,20 @@
   
   <ItemGroup>
     <Reference Include="Sepidar.BaseApi">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.BaseApi.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.BaseApi.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="Sepidar.BlobManagement">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.BlobManagement.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.BlobManagement.dll</HintPath>
     </Reference>
     <Reference Include="Sepidar.EntityFramework">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.EntityFramework.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.EntityFramework.dll</HintPath>
     </Reference>
   </ItemGroup>
   
-  <Import Project="$(SepidarProjectsRoot)\Framework\ProjectEf.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectEf.targets" />
   
 </Project>

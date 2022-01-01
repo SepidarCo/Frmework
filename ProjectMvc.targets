@@ -2,11 +2,11 @@
 
   <ItemGroup>
     <Reference Include="Sepidar.Mvc">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Mvc.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
   
-  <Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+  <Import Project="$(GitSepidarProjectsRoot)\Framework\Project.targets" />
 
 </Project>

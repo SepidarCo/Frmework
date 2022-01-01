@@ -1,15 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-	<Import Project="$(SepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
-	<Import Project="$(SepidarProjectsRoot)\Framework\Project.targets" />
+	<Import Project="$(GitSepidarProjectsRoot)\Framework\ProjectDotNet.targets" />
+	<Import Project="$(GitSepidarProjectsRoot)\Framework\Project.targets" />
 
   <ItemGroup>
     <Reference Include="Sepidar.Framework.Sql">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.Sql.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.Sql.dll</HintPath>
       <Private>true</Private>
     </Reference>
     <Reference Include="Sepidar.EntityFramework">
-      <HintPath>$(SepidarProjectsRoot)\Framework\Assemblies\Sepidar.EntityFramework.dll</HintPath>
+      <HintPath>$(GitSepidarProjectsRoot)\Framework\Assemblies\Sepidar.EntityFramework.dll</HintPath>
       <Private>true</Private>
     </Reference>
   </ItemGroup>
